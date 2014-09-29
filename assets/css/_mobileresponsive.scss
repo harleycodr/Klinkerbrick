@@ -1,0 +1,85 @@
+/* mobile and responsive stuff start */
+/* MOBILE NAV */
+#mobilenavtopbar {
+  position: relative;
+  z-index: 999;
+  background: $accent;
+  width: 100%;
+  min-height: 5%;
+  left: -4px; }
+
+#lines {
+  border-bottom: 17px double #fff;
+  border-top: 6px solid #fff;
+  content: "";
+  cursor: pointer;
+  height: 5px;
+  width: 30px; }
+
+#mobilenav {
+  width: 100%;
+  background: $accent;
+  padding: 3px;
+  line-height: 3em; }
+
+#mobilelogo {
+  background: #ffefdf; 
+  padding:10px 0px;
+  width:90%;
+  img {
+	min-width:100%
+  }
+  }
+
+#mobilenav a {
+  color: #fff;
+  text-decoration: none; }
+
+.mobilenavparent {
+  background: $accent; }
+
+.mobilenavparent a {
+  color: #fff;
+  text-decoration: none; }
+
+.child {
+  background: $accent;
+  padding: 3px 3px 5px;
+  display: none;
+  padding-left: 20px; }
+
+.child a {
+  color: #fff;
+  text-decoration: none; }
+
+.clearingdiv {
+  display: none; }
+
+#mobilenavcontainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0; 
+  z-index:99999;
+  background:#ffefdf;
+  }
+#mobile_footer {
+	display:none;
+	font-size:1em;
+	font-weight:bold;
+	ul {
+		list-style:none;
+		display:block;
+		list-style-position: inside;
+	}
+	li {
+		line-height:2em;
+		margin-bottom:.5em;
+		margin-left:-39px;
+		background:#ccc;
+	}
+	a {
+		text-decoration:none;
+	}
+}
+

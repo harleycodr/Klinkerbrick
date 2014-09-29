@@ -1,0 +1,98 @@
+/* breakpoints start */
+
+@media only screen and (min-device-width : 320px) and (max-device-width:480px) {
+  h1 {
+    font-size: 1.2em; }
+
+  #banner, #headerimage, #headerglow {
+    display: none; }
+
+  .hpcols {
+    float: none;
+    width: 90%; }
+
+  .v65-pod, .grid4column {
+    float: none;
+	width:100%;	
+		img {
+			min-width:100%;
+		}
+	padding:0px;
+	}
+  #banner  {
+    float:none;
+	clear:both;
+	width:50%;
+	}
+  #loginbox {
+	width:100%;
+	margin-top:8em;
+  }
+  .v65-yourAccount, .v65-login, .v65-logout {
+	border:none;
+	height:1em;
+	line-height:1em;
+  }
+  #v65-modalCart #v65-toggleModalCart {
+	line-height:2.2em;
+  }
+  #page_container_hp, #page_container {
+	background:none;
+	width:98%;
+	margin-left:auto;
+	margin-right:auto;
+  }
+  .cart-icon {
+	display:none;
+  }
+  #v65-modalCart {
+	margin-top:8em;
+  }
+  #mobilenavcontainer {
+    display: block; }
+
+  #mobilenav ul {
+    display: block; }
+	
+  #mobilelogo {
+    display: block; }
+	
+  #page_container {
+    margin-top: 100px; }
+	
+  #page_container_hp {
+	margin-top:54px;
+  }
+  #hp_pod_container {
+	margin-top:-50px;
+  }
+  .v65-pod {
+	float:left;
+  }
+  #top-nav {
+    display: none; }
+
+  header {
+    top: -8px; }
+.col4 {
+	float:none;
+	width:100%;
+	padding:5px;
+	table {
+		width:96%;
+	}
+}
+  #footer_area, #footer_nav, #footer_legal {
+    display: none; }
+  #mobile_footer {
+	display:block;
+  }
+  #socialnetworking {
+    display: none; }
+
+  #footer_areal {
+    display: none; } 
+}
+
+
+/* breakpoints end */

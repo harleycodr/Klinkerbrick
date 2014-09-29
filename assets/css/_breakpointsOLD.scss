@@ -1,0 +1,234 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+  h1 {
+    font-size: 1.2em; }
+
+  #banner, #headerimage, #headerglow {
+    display: none; }
+
+  .hpcols {
+    float: none;
+    width: 90%; }
+
+  .v65-pod, .grid4column {
+    float: none;
+	width:100%;	}
+
+  #banner #loginbox {
+    float:none;
+	clear:both;
+	width:50%;
+	}
+
+  #mobilenavcontainer {
+    display: block; }
+
+  #mobilenav ul {
+    display: block; }
+	
+  #mobilelogo {
+    display: block; }
+	
+  #page_container {
+    margin-top: 100px; }
+	
+  #page_container_hp {
+	margin-top:54px;
+  }
+  #hp_pod_container {
+	margin-top:-50px;
+  }
+  .v65-pod {
+	float:left;
+  }
+  #top-nav {
+    display: none; }
+
+  header {
+    top: -8px; }
+.col4 {
+	float:none;
+	width:100%;
+	padding:5px;
+	table {
+		width:96%;
+	}
+}
+  #footer_area, #footer_nav, #footer_legal {
+    display: none; }
+  #mobile_footer {
+	display:block;
+  }
+  #socialnetworking {
+    display: none; }
+
+  #footer_areal {
+    display: none; } 
+}
+@media only screen and (min-device-width : 481px) and (max-device-width : 768px)  {
+	#banner #loginox {
+		float:right;
+		width:60%;
+	}
+	#page_container_hp {
+		margin-top:128px;
+	}
+	.v65-pod {
+		width:20%;
+	
+	}
+	.v65-pod img {
+		max-width:100%;
+		height:auto; 
+	}
+	.col4 {
+		width:48%;
+	}
+	#top-nav {
+		display:none;
+	}
+	 #loginbox {
+    float:right;
+	width:50%;
+	}
+
+	  #mobilenavcontainer {
+		display: block; }
+
+	  #mobilenav ul {
+		display: block; }
+		
+	  #mobilelogo {
+		display: block; 
+		}
+		 #banner, #headerimage, #headerglow {
+    display: none; 
+	}
+	.v65-pod {
+		width:40%;
+	}
+	.col4 {
+		width:43%;
+	}
+	#footer_logo, #footer_nav, #footer_legal {
+		display:none;
+	}
+	#mobile_footer {
+	display:block;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+	 h1 {
+		font-size: 1.2em; }
+
+/*	  #headerimage {
+		display: none; }*/
+		
+	  #headerglow, #banner {
+		border:none;
+		top:23px;
+	  }
+	  .hpcols {
+		float: none;
+		width: 90%; }
+
+	  .v65-pod, .grid4column {
+		float: none;
+		width:100%;	}
+
+	  #loginbox {
+		float:right;
+		width:50%;
+	}
+
+	  #logo {
+		display:block;
+	  }
+	  #mobilenavcontainer {
+		display: block; }
+
+	  #mobilenav ul {
+		display: block; }
+		
+	  #mobilelogo {
+		display: none; }
+		
+	  #page_container {
+		margin-top: -50px; }
+		
+	  #page_container_hp {
+		margin-top:115px;
+	  }
+	  #hp_pod_container {
+		margin-top:-50px;
+	  }
+	  .v65-pod {
+		float:left;
+		width:40%;
+	  }
+	  #top-nav {
+		display: none; }
+
+	  header {
+		top: -8px; }
+	.col4 {
+		float:left;
+		width:40%;
+		padding:5px;
+		table {
+			width:96%;
+		}
+	}
+	  #footer_area, #footer_nav, #footer_legal {
+		display: none; }
+	  #mobile_footer {
+		display:block;
+	  }
+	  #socialnetworking {
+		display: none; }
+
+	  #footer_areal {
+		display: none; 
+		} 
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+	#page_container_hp {
+		margin-top:221px;
+	}
+	#headerglow {
+		border:none;
+		top:23px;
+	  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1340px) {
+/* Styles */
+	#banner #loginbox {
+		width:43%;
+	}
+}
+@media only screen and (min-device-width : 1500px) {
+	#homepage-slider{
+		max-height:246%;
+	}
+	#hp_pod_container {
+		margin-left:auto;
+		margin-right:auto;
+		width:76%;
+	}
+	.v65-pod {
+		width:250px;
+	}
+	#banner #loginbox {
+		width:28%;
+	}
+}

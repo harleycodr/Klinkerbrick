@@ -1,0 +1,167 @@
+$accent:#af2626;
+$border:#7c211e;
+@import "flexslider";
+@import "typography";
+@import "dropdownmenu";
+@import "homepage";
+
+body {
+  background-image: url("../images/marblebg.jpg");
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 100%, 75%;
+  font-family: "Helvetica Neu", Helvetica, Arial, Sans-serif;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.4em; }
+
+a {
+  color: $accent;
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+#banner {
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  height: 280px; }
+
+  #banner img {
+    vertical-align: bottom; }
+    #banner img a {
+      border: 0px; }
+  
+  #banner #headerimage {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    z-index: 99;
+    min-width: 100%;
+    max-width: 100%;
+    border-bottom: solid thick $accent; }
+    #banner #headerimage img {
+      min-width: 100%;
+      max-width: 100%;
+      max-height: 280px; }
+  #banner #headerglow {
+    background: url("../images/header.png") repeat-x;
+    position: absolute;
+    z-index: 999;
+    min-width: 100%;
+    min-height: 280px;
+    top: 45px;
+    border-top: solid thick $accent; }
+  #banner #banner-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+  #banner #logo {
+    position: absolute;
+    z-index: 9999;
+    width: 30%;
+    top: 55px; }
+  #banner #top-nav {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    z-index: 9999;
+    width: 60%; }
+#loginbox {
+    width: 30%;
+    float: right; }
+	
+#page_container {
+  clear: both;
+  overflow: hidden;
+  margin-top: 20px;
+  background-image: url(../images/brickbg.png);
+  background-size: 100%; }
+  
+#content_box {
+  background: none repeat scroll 0 0 #F9FAF7;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 1em;
+  width: 80%;
+  margin-top: 54px;
+  box-shadow: 0 0 5px 10px #f9faf7; }
+
+
+#col4area {
+  background: #d6d6d6;
+  overflow: hidden;
+  padding-top: 2em;
+  clear:both; }
+
+#col4container {
+  /*	width:80%;*/
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding-bottom: 2em;
+  border-bottom: solid thick $border; 
+  }
+
+.col4 {
+  width: 24%;
+  float: left;
+  padding: 5px; }
+
+.header-underline {
+  margin-bottom: 14px;
+  padding-bottom: 10px; }
+
+.header-underline {
+  border-bottom: 3px solid $border; }
+
+#logo img {
+  max-width: 100%; }
+
+.dotted {
+  border-bottom: 1px dotted #BDB7A4; }
+
+#footer_area {
+  background: url("assets/images/marblebg.png");
+  overflow: hidden;
+  padding: 10px; }
+
+#footer_logo {
+  width: 20%;
+  float: left; }
+
+
+#footer_nav a {
+  color: $border;
+  text-decoration: none; }
+
+#footer_nav ul {
+  display: inline; }
+
+#footer_nav li {
+  list-style: none;
+  display: inline;
+  margin-right: 15px; }
+
+#footer_legal {
+  clear: both;
+  color: $border;
+  font-size: .7em;
+  float: right;
+  width: 33%;
+  text-align: center;
+  clear:both;}
+  #footer_legal a {
+    color: $border;
+    text-decoration: none; }
+  #footer_legal li {
+    list-style: none;
+    display: inline;
+    margin-right: 15px; }
+
+@import "vin65overrides";
+
+@import "mobileresponsive";
+@import "breakpoints";

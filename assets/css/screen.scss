@@ -1,0 +1,858 @@
+@charset "utf-8";
+@import "compass";
+@import url("../css/normalize.min.css");
+
+
+
+/* CSS Document */
+/* This file includes PIE.htc (http://css3pie.com/) a script that lets CSS3 be used in IE6-9*/
+/* ====================================================================================================
+	Table of Content
+	Theme Settings
+	1. Typography - Copy into admin.css
+	2. Header
+	3. Navigation
+		a. Navigation
+		b. Sub Navigation
+
+	4. Content
+		a. Homepage Styles
+		b. Page Styles
+
+	5. Blog Template
+	6. Print Template
+	7. Buttons
+	8. Footer
+	9. Vin65 Overrides
+		a. User Tools
+		b. Homepage Product Group
+		c. Checkout Overrides
+*/
+
+//   ===================================================================================================
+//      Theme Settings
+// =====================================================================================================
+
+
+//   ===================================================================================================
+//		Global Variables
+//   ===================================================================================================
+
+$pie: url(/assets/css/PIE.htc);
+
+
+//   ===================================================================================================
+//		Default Theme
+//   ===================================================================================================
+$backgroundColor: #eee; // Website Background Color
+$boxShadowColor: #999; // Box Shadow Color
+$websiteWidth: 950px;
+
+$fontColor: #666; // General Font Color
+$fontFamily: "Lucida Sans Unicode", "Lucida Grande", sans-serif; // Default Font Family
+
+$headingFontFamily: "Times New Roman", Times, serif; // Default Heading Font Family
+$headingFontColor: #333; // Default Heading Font Color
+
+$headerFontColor: #333; //Font Color outside the container
+$headerFontColorHover: #000; // Hover font color outside the container
+
+$footerFontColor: #333; //Font Color outside the container
+$footerFontColorHover: #000; // Hover font color outside the container
+
+
+//   ===================================================================================================
+//		Black Theme
+//   ===================================================================================================
+// $backgroundColor: #000000; // Website Background Color
+// $boxShadowColor: #000000; // Box Shadow Color
+// $websiteWidth: 950px;
+
+// $fontColor: #666; // General Font Color
+// $fontFamily: "Lucida Sans Unicode", "Lucida Grande", sans-serif; // Default Font Family
+
+// $headingFontFamily: "Times New Roman", Times, serif; // Default Heading Font Family
+// $headingFontColor: #333; // Default Heading Font Color
+
+// $headerFontColor: #fff; //Font Color outside the container
+// $headerFontColorHover: #ccc; // Hover font color outside the container
+
+// $footerFontColor: #fff; //Font Color outside the container
+// $footerFontColorHover: #ccc; // Hover font color outside the container
+
+
+//   ===================================================================================================
+//		Red Theme
+//   ===================================================================================================
+// $backgroundColor: #790102; // Website Background Color
+// $boxShadowColor: #3d3d3d; // Box Shadow Color
+// $websiteWidth: 950px;
+// $linkColor: #336699;
+
+// $fontColor: #666; // General Font Color
+// $fontFamily: "Lucida Sans Unicode", "Lucida Grande", sans-serif; // Default Font Family
+
+// $headingFontFamily: "Times New Roman", Times, serif; // Default Heading Font Family
+// $headingFontColor: #333; // Default Heading Font Color
+
+// $headerFontColor: #fff; //Font Color outside the container
+// $headerFontColorHover: #ccc; // Hover font color outside the container
+
+// $footerFontColor: #fff; //Font Color outside the container
+// $footerFontColorHover: #ccc; // Hover font color outside the container
+
+
+//   ===================================================================================================
+//		Cream Theme
+//   ===================================================================================================
+// $backgroundColor: #f4e8ae; // Website Background Color
+// $boxShadowColor: #8b8b8b; // Box Shadow Color
+// $websiteWidth: 950px;
+
+// $fontColor: #666; // General Font Color
+// $fontFamily: "Lucida Sans Unicode", "Lucida Grande", sans-serif; // Default Font Family
+
+// $headingFontFamily: "Times New Roman", Times, serif; // Default Heading Font Family
+// $headingFontColor: #333; // Default Heading Font Color
+
+// $headerFontColor: #000; //Font Color outside the container
+// $headerFontColorHover: #333; // Hover font color outside the container
+
+// $footerFontColor: #000; //Font Color outside the container
+// $footerFontColorHover: #333; // Hover font color outside the container
+
+
+
+
+/*   ===================================================================================================
+     1. Typography - These get copied into the admin.css
+======================================================================================================== */
+
+body{
+	background-color: $backgroundColor;
+	font-size: 12px;
+	color: $fontColor;
+	font-family: $fontFamily;
+	line-height: 1.5em;
+}
+
+a{
+	color: #369;
+	text-decoration: none;
+	&:hover, &:focus, &:active{
+		text-decoration: underline;
+	}
+}
+
+h1,h2,h3,h4,h5,h6,p,table,ul,ol {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+ul, ol, dl, p, table, pre {
+	margin-bottom: 1em;
+}
+
+#{headings(1,6)}{
+	color: $headingFontColor;
+	font-family: $headingFontFamily;
+	font-weight: normal;
+	margin: 0;
+}
+
+	h1 {
+		font-size: 32px;
+		line-height: 1.2;
+		margin-bottom: 0.6em;
+	}
+
+	h2 {
+		font-size: 26px;
+		line-height: 1.2;
+		margin: 0.25em  0 0.5em;
+	}
+
+	h3 {
+		font-size: 22px;
+		line-height: 1.2;
+		margin-bottom: 0.6em;
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	h5 {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	h6 {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+img{
+	border:none;
+}
+
+form {
+	margin-bottom: 1em;
+}
+
+legend {
+	color: #111;
+}
+
+hr {
+	background-color: #666;
+	border: 0;
+	color: #666;
+	height: 1px;
+}
+
+/*   ===================================================================================================
+     2. Header
+======================================================================================================== */
+
+.header{
+	height:180px;
+	margin-bottom: 1em;
+	position: relative;
+	width: 100%;
+	z-index: 100;
+}
+
+	.logo{
+		display: block;
+		float: left;
+	}
+
+/*   ===================================================================================================
+     3. Navigation
+======================================================================================================== */
+
+/* ----- a. Main Menu ----- */
+.mainMenu{
+	float: right;
+	font-size: 13px;
+	height: 24px;
+	margin: 80px 0 30px;
+	position: relative;
+	width: 640px;
+	z-index: 101;
+
+	ul{
+		list-style: none;
+		margin: 0;
+		float: right;
+		padding: 0;
+		position: relative;
+	}
+
+	li{
+		float: left;
+		margin: 0 0 0 55px;
+		padding: 0;
+		position: relative;
+
+		a{
+			color: $headerFontColor;
+			display: inline-block;
+			height: 32px;
+			line-height: 32px;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			text-decoration: none;
+
+			&:hover{
+				color: $headerFontColorHover;
+				text-decoration: none;
+			}
+		}
+
+		// Drop Down
+		&:hover ul{
+			border: 1px solid #ccc;
+			display: block;
+			font-size: 12px;
+		}
+
+		ul{
+			display: none;
+			left: -10px;
+			position: absolute;
+			top: 32px;
+			width: 180px;
+		}
+
+		li{
+			display: block;
+			float: none;
+			margin: 0;
+			text-align: left;
+			width: 180px;
+
+			a{
+				background-color: #fff;
+				color: #666;
+				display: block;
+				float: none;
+				height: 28px;
+				line-height: 28px;
+				margin: 0;
+				padding: 0 0 0 10px;
+				text-align: left;
+				text-transform: none;
+				width: 170px;
+
+				&:hover{
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.v65-pageAParent{
+		color: $headerFontColorHover
+	}
+
+	.v65-home{}
+
+	.v65-selected{
+		color: $headerFontColorHover;
+		font-weight: bold;
+	}
+}
+
+/* ----- b. Sub Menu ----- */
+.subMenu{
+	border-right: 1px solid #ccc;
+	float: left;
+	margin: 60px 40px 0 0;
+	padding-right: 20px;
+	width: 170px;
+
+	ul{
+		font-size: 11px;
+		list-style: none;
+		margin: 0 0 1em 10px;
+		padding: 0;
+		width: 160px;
+	}
+
+	li{
+		line-height: 2;
+
+		a{
+			&:hover{}
+		}
+
+		ul{
+			margin-left: 10px;
+			width: 160px;
+		}
+	}
+
+	.v65-pageAParent {
+		color: #000;
+	}
+
+	.v65-leftSelected{
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+
+/*   ===================================================================================================
+     4. Content
+======================================================================================================== */
+
+.wrapper{
+	margin: 0 auto;
+	position: relative;
+	width: $websiteWidth;
+}
+
+
+/* ----- a. Homepage Styles ----- */
+.homepageContent{
+	background: #fff;
+	box-shadow: 0 0 20px $boxShadowColor;
+	behavior: $pie;
+}
+
+.homepageText{
+	float: left;
+	margin-bottom: 20px;
+	padding: 0 30px 30px 20px;
+	width: 470px;
+}
+
+.homepageProductGroup {
+	float: left;
+	margin: 0 0 20px;
+	padding: 0 0 30px 20px;
+	width: 400px;
+}
+
+#slider{
+	height: 350px;
+	overflow: hidden;
+	width: 950px;
+	}
+
+/* ----- b. Page Styles ----- */
+
+.content{
+	background: #fff;
+	box-shadow: 0 0 20px $boxShadowColor;
+	padding: 30px;
+}
+
+.pageContent{
+	float: left;
+	width: 650px;
+}
+
+/*   ===================================================================================================
+     5. Blog Template
+======================================================================================================== */
+
+.blogContent{
+	float: left;
+	padding: 20px 25px 0 0;
+	width: 520px;
+}
+
+.blogRightWrapper {
+	float: right;
+	padding-top: 20px;
+	width: 325px;
+
+	ul{
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
+	}
+
+	li{
+		font-size: 11px;
+		margin: 0 0 0 10px;
+	}
+}
+
+	.blogFilterLeft {
+		float: left;
+		padding: 0 25px 0 0;
+		width: 150px;
+	}
+
+	.blogFilterRight {
+		float: left;
+		width: 150px;
+	}
+
+/*   ===================================================================================================
+     6. Print Template
+======================================================================================================== */
+
+.printBody {
+	background-color: #fff;
+	background-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.printWrapper {
+		margin: 0 auto;
+		width: 700px;
+	}
+
+		.printHeader {
+			height: 150px;
+			width: 700px;
+		}
+
+		.printContent {
+			text-align: left;
+			width: 700px;
+		}
+
+/*   ===================================================================================================
+     7. Buttons
+======================================================================================================== */
+
+/* OPTIONAL BUTTON STYLES regular button: */
+button.defaultBtn {
+	background: transparent url(../images/buttons/btn_sprite.gif) no-repeat right -100px;
+}
+
+button.defaultBtn span {
+	background: transparent url(../images/buttons/btn_sprite.gif) no-repeat left top;
+}
+
+/* OPTIONAL BUTTON STYLES alt button: */
+button.altBtn {
+	background: transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat right -100px;
+}
+
+button.altBtn span {
+	background: transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat left top;
+}
+
+/* OPTIONAL BUTTON STYLES modal button: */
+button.modalBtn {
+	background: transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat right -50px;
+}
+
+button.modalBtn span {
+	background: transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat left top;
+}
+
+/* OPTIONAL BUTTON STYLES modal alt button: */
+button.altModalBtn {
+	background: transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat right -50px;
+}
+
+button.altModalBtn span {
+	background: transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat left top;
+}
+
+/* OPTIONAL BUTTON STYLES large button: */
+button.largeBtn {
+	background: transparent url(../images/buttons/btn_large_sprite.gif) no-repeat right -100px;
+}
+
+button.largeBtn span {
+	background: transparent url(../images/buttons/btn_large_sprite.gif) no-repeat left top;
+}
+
+/* OPTIONAL BUTTON STYLES large button: */
+button.altLargeBtn {
+	background: transparent url(../images/buttons/btn_large_alt_sprite.gif) no-repeat right -100px;
+}
+
+button.altLargeBtn span {
+	background: transparent url(../images/buttons/btn_large_alt_sprite.gif) no-repeat left top;
+}
+
+
+/* REQUIRED LINK BUTTON STYLES: */
+
+/* Link Button Normal */
+a.linkBtn {
+	background: transparent url(../images/buttons/btn_sprite.gif) no-repeat right -100px;
+}
+
+a.linkBtn span {
+	background: transparent url(../images/buttons/btn_sprite.gif) no-repeat left top;
+}
+
+/* Link ALT Button Normal */
+a.linkAltBtn {
+	background: transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat right -100px;
+}
+
+a.linkAltBtn span {
+	background: transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat left top;
+}
+
+/* Modal Link Button Normal */
+a.modalLinkBtn {
+	background: transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat right -50px;
+}
+
+a.modalLinkBtn span {
+	background: transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat left top;
+}
+
+/* Modal Link ALT Button Normal */
+a.modalLinkAltBtn {
+	background: transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat right -50px;
+}
+
+a.modalLinkAltBtn span {
+	background: transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat left top;
+}
+
+/* Link Button Large */
+a.largeLinkBtn {
+	background: transparent url(../images/buttons/btn_large_sprite.gif) no-repeat right -100px;
+}
+
+a.largeLinkBtn span {
+	background: transparent url(../images/buttons/btn_large_sprite.gif) no-repeat left top;
+}
+
+/*   ===================================================================================================
+     8. Footer
+======================================================================================================== */
+
+.footer{
+	color: $footerFontColor;
+	padding: 1.5em 0;
+	text-align: center;
+	width: 100%;
+
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		display: inline;
+		padding:0 5px;
+
+		a{
+			color: $footerFontColor;
+			display: inline-block;
+			font-size: 0.917em;
+			position: relative;
+			&:hover{
+				color: $footerFontColorHover;
+			}
+		}
+	}
+
+	.accolade{
+		font-size: 0.917em;
+	}
+
+	a{
+		color:$footerFontColor;
+	}
+}
+
+/*   ===================================================================================================
+     9. Vin65 Overrides
+======================================================================================================== */
+
+/* ----- a. User Tools ----- */
+#user-tools a {
+	color: $headerFontColor;
+}
+
+/* ----- b. Homepage Product Group ----- */
+
+.homepageProductGroup .v65-productGroup-products{
+	text-align: left;
+	width: 100%;
+}
+
+	.homepageProductGroup .v65-productGroup-title{
+		color: $headingFontColor;
+		font-family: $headingFontFamily;
+		font-size: 26px;
+		line-height: 1.2;
+		margin: 0.25em  0 0.5em;
+	}
+
+	.homepageProductGroup .v65-productGroup-teaser{
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+
+	.homepageProductGroup .v65-productGroup-product{
+		margin: 0 0 1em;
+		width: 100%;
+	}
+
+		.homepageProductGroup .v65-product-photo{
+			float: left;
+			width: auto;
+		}
+
+		.homepageProductGroup .v65-productGroup-product .v65-product-addToCart-priceWrapper{
+			display: inline;
+		}
+
+/* ----- c. Checkout Overrides ----- */
+
+#v65-fieldset-paymentMethod{
+	float:left;
+	width:400px;
+}
+
+form#v65-checkBilling .v65-additionalComments {
+	float:none;
+	margin-left:10px;
+	padding:15px 0 0;
+	width:390px;
+}
+
+#v65-signUpClubSummaryWrapper {
+	margin-bottom: 20px;
+}
+
+// d. Default SASS Product List
+.v65-product2Up{
+
+	.v65-product-title{
+		a{
+
+		}
+	}
+	.v65-product-photo{
+		a{
+			img{
+
+			}
+		}
+	}
+	.v65-product-teaser{
+		p{
+
+		}
+	}
+	.v65-product-drilldownLink{
+		a{
+
+		}
+	}
+	.v65-productreviewStats{
+
+	}
+	.v65-product-inventoryMessage{
+		.v65-product-inventoryMessage-inStock{
+
+		}
+	}
+	.v65-product-addToCart{
+		.v65-addToCart{
+			fieldset{
+				legend{}
+				.v65-product-addToCart-priceWrapper{
+					.v65-product-addToCart-price{
+
+					}
+					.v65-product-addToCart-unitDescription{
+
+					}
+					.v65-product-addToCart-productSKU{
+
+					}
+				}
+				.v65-product-addToCart-quantity{
+					input{
+
+					}
+				}
+				.v65-product-addToCart-button{
+					button{
+						span{
+
+						}
+					}
+				}
+			}
+		}
+		.v65-addToCartCase{
+
+		}
+	}
+	.v65-product-socialBar{
+
+	}
+}
+
+// e. Default SASS Product Drilldown
+.v65-productWrapper{
+	.v65-product-leftCol{
+		.v65-product-photo{
+			img{
+
+			}
+		}
+		.v65-productDrilldown-specs{
+			.v65-wine-specs{
+				.v65-wine-specs-title{
+
+				}
+				.v65-product-attribute{
+					.v65-product-attributeLabel{
+
+					}
+					.v65-product-attributeValue{
+
+					}
+				}
+			}
+		}
+	}
+	.v65-product-rightCol{
+		h1{
+
+		}
+		.v65-product-teaser{
+			p{
+
+			}
+		}
+		.v65-product-availability{
+			.v65-product-availability-inStock{
+
+			}
+		}
+		.v65-product-addToCart{
+
+			.v65-addToCart{
+
+				fieldset{
+					legend{}
+					.v65-product-addToCart-priceWrapper{
+						.v65-product-addToCart-price{
+
+						}
+						.v65-product-addToCart-unitDescription{
+						}
+						.v65-product-addToCart-productSKU{
+
+						}
+					}
+					.v65-product-addToCart-quantity{
+						input{
+
+						}
+					}
+					.v65-product-addToCart-button{
+						button{
+							span{
+
+							}
+						}
+					}
+				}
+			}
+			.v65-addToCartCase{
+
+			}
+		}
+		.v65-product-reviewStats{
+			a{
+
+			}
+		}
+		.v65-product-socialBar{
+
+		}
+		.v65-product-description{
+
+		}
+		.v65-product-reviews{
+			.v65-product-reviews-title{
+
+			}
+		}
+		.v65-ProductRating{
+
+		}
+	}
+}
+
+
